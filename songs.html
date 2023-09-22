@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My songs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: darkcyan;
+            
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .playlist {
+            list-style: none;
+            padding: 0;
+        }
+        .song {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .song-info {
+            flex: 1;
+        }
+        .song-title {
+            font-size: 20px;
+            margin: 0;
+        }
+        .song-artist {
+            font-size: 16px;
+            color: #666;
+        }
+        .song-controls {
+            display: flex;
+            align-items: center;
+        }
+        audio {
+            width: 100%;
+            max-width: 300px;
+        }
+        .play-pause-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DERREX</h1>
+        <nav>
+            <ul>
+              <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+              <li><a href="playlist.html"><i class="fas fa-music"></i> Playlists</a></li>
+              <li><a href="contact.html"><i class="fas fa-user"></i> Contact</a></li>
+              <li><a href="songs.html"><i class="fas fa-calendar-alt"></i> Songs</a></li>
+              <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="Album.html"><i class="fa fa album"></i>Album</a></li>
+            </ul>
+          </nav>
+      </header>
+
+    <div class="container">
+        <ul class="playlist">
+            <!-- Add your songs here -->
+            <li class="song">
+                <div class="song-info">
+                    <h2 class="song-title">Backer</h2>
+                    <p class="song-artist">Derrex</p>
+                </div>
+                <div class="song-controls">
+                    <button class="play-pause-button">&#9654;</button>
+                    <audio controls>
+                        <source src="E:\mysite\[INSTRUMENTAL] Ice Prince - Shakara ft Ckay - validupdates.com.mp3"type="audio/mpeg">
+                    
+                    </audio>
+                </div>
+            </li>
+            <li class="song">
+                <div class="song-info">
+                    <h2 class="song-title">Be the Best</h2>
+                    <p class="song-artist">Derrex</p>
+                </div>
+                <div class="song-controls">
+                    <button class="play-pause-button">&#9654;</button>
+                    <audio controls>
+                        <source src="Freebeat_Davido_And_King_Promise_Type_Prod_By_Melodysongz_9jaflaver.com_.mp3" type="audio/mpeg">
+                      
+                    </audio>
+                </div>
+            </li>
+            <!-- Add more songs as needed -->
+        </ul>
+    </div>
+
+    <script>
+        const playPauseButtons = document.querySelectorAll('.play-pause-button');
+        const audioPlayers = document.querySelectorAll('audio');
+
+        playPauseButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                if (audioPlayers[index].paused) {
+                    audioPlayers[index].play();
+                    button.innerHTML = "&#9616;&#9616;";
+                } else {
+                    audioPlayers[index].pause();
+                    button.innerHTML = "&#9654;";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

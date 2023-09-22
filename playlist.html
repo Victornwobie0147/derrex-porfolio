@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My playlist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(https://media.istockphoto.com/id/1176602671/photo/falling-autumn-leaves-before-sunset.webp?b=1&s=612x612&w=0&k=20&c=nXlYtEapVrWa6IEbaVeLQQPD9bAxhcKChw2hLQOCNRk=);
+            background-size: cover;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .playlist {
+            list-style: none;
+            padding: 0;
+        }
+        .song {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .song-info {
+            flex: 1;
+        }
+        .song-title {
+            font-size: 20px;
+            margin: 0;
+        }
+        .song-artist {
+            font-size: 16px;
+            color: #666;
+        }
+        .song-controls {
+            display: flex;
+            align-items: center;
+        }
+        audio {
+            width: 100%;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DERREX</h1>
+        <nav>
+            <ul>
+              <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+              <li><a href="playlist.html"><i class="fas fa-music"></i> Playlists</a></li>
+              <li><a href="contact.html"><i class="fas fa-user"></i> Contact</a></li>
+              <li><a href="songs.html"><i class="fas fa-calendar-alt"></i> Songs</a></li>
+              <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="Album.html"><i class="fa fa album"></i>Album</a></li>
+            </ul>
+          </nav>
+      </header>
+
+    <div class="container">
+        <ul class="playlist">
+            <!-- Add your songs here -->
+            <li class="song">
+                <div class="song-info">
+                    <h2 class="song-title">Be the Best</h2>
+                    <p class="song-artist">Derrex</p>
+                </div>
+                <div class="song-controls">
+                    <audio controls>
+                        <source src="song1.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </li>
+            <li class="song">
+                <div class="song-info">
+                    <h2 class="song-title">Backer</h2>
+                    <p class="song-artist">Derrex</p>
+                </div>
+                <div class="song-controls">
+                    <audio controls>
+                        <source src="song2.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </li>
+            <!-- Add more songs as needed -->
+        </ul>
+    </div>
+</body>
+</html>
